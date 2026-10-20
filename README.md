@@ -14,7 +14,7 @@ A personal portfolio of writing, research, interactive tools, podcasts and astro
 - `off-the-clock.html` — astronomy
 - `assets/` — styles, locally hosted fonts, scripts and images
 
-The site is static HTML and CSS with a small vanilla JavaScript theme control. It has no framework or build dependencies, analytics or trackers. Fonts are hosted locally with their licences. Light and dark mode follow the visitor’s system preference unless they choose a theme; the theme is the only value saved in local storage.
+The site is static HTML and CSS with a small vanilla JavaScript theme control. It has no framework or build dependencies, analytics or trackers. Fonts are hosted locally with their licences. New visitors start in light mode. The theme toggle lets them choose dark mode and remembers their explicit choice; the theme is the only value saved in local storage.
 
 ## Local preview
 

@@ -1,7 +1,6 @@
 (() => {
   const root = document.documentElement;
   const toggle = document.querySelector('[data-theme-toggle]');
-  const preference = window.matchMedia('(prefers-color-scheme: dark)');
   let saved;
   try { saved = localStorage.getItem('tannmay-portfolio-theme'); } catch (_) {}
   const apply = (theme) => {
@@ -12,13 +11,10 @@
     toggle.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
     toggle.querySelector('span').textContent = dark ? 'Light' : 'Dark';
   };
-  apply(saved || (preference.matches ? 'dark' : 'light'));
+  apply(saved === 'dark' ? 'dark' : 'light');
   toggle?.addEventListener('click', () => {
     saved = root.dataset.theme === 'dark' ? 'light' : 'dark';
     apply(saved);
     try { localStorage.setItem('tannmay-portfolio-theme', saved); } catch (_) {}
-  });
-  preference.addEventListener('change', (event) => {
-    if (!saved) apply(event.matches ? 'dark' : 'light');
   });
 })();
