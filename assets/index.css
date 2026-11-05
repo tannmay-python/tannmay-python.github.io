@@ -45,7 +45,7 @@
 .a .podcast-row p:not(.todo){font-size:14px;color:var(--muted);margin-top:10px;max-width:62ch}
 .a .astronomy-copy{font-family:var(--serif);font-size:28px;line-height:1.45;max-width:41ch;letter-spacing:-.01em}
 .a .photo-placeholder{background:transparent}
-.a .footer{margin-left:200px}
+.a .footer{margin-left:0}
 .a{border-top:6px solid var(--ink)}
 .a .nav-arrow{display:inline-block;margin-left:9px;color:var(--accent);font-size:12px}
 .a .section-nav a{transition:color .12s ease}
@@ -57,7 +57,7 @@
 .home .explore-invitation{color:var(--muted);font-family:var(--serif);font-size:21px;margin:18px 0 3px;font-style:italic}
 .home .explore-invitation span{font-family:var(--sans);font-size:14px;margin-left:7px}
 .home .section-nav{padding-block:12px;margin-bottom:0;gap:38px}
-.home-footer{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-block:20px 25px}
+.home-footer{display:flex;align-items:baseline;justify-content:center;gap:20px;padding-block:20px 25px}
 .home-footer .contact-links{font-size:11px}
 .home-footer .footer-meta{font-size:10px}
 .inner .topline{padding-block:30px}
@@ -74,7 +74,7 @@
 .inner .footer-main{font-size:12px}
 @media(max-width:800px){.home .home-main{padding-block:15px 25px}.home .hero{padding-top:28px;padding-bottom:32px}.home .hero-top{margin-bottom:26px}.home .section-nav{gap:10px 28px}.home-footer{padding-block:20px;flex-wrap:wrap}.inner .section{margin-top:42px}.inner .section-head h1{font-size:49px}}
 @media(max-width:480px){.home .hero-top{margin-bottom:24px}.home .hero{padding-top:22px;padding-bottom:27px}.home .section-nav{gap:0 20px;padding-block:10px}.home .explore-invitation{font-size:19px;margin-top:16px}.home .home-main{padding-top:0;padding-bottom:20px}.home-footer{gap:14px;padding-block:12px 18px}.home-footer .contact-links{gap:12px 20px}.inner .topline{padding-block:22px}.inner .inner-nav .section-nav{gap:0 17px;padding-block:10px}.inner .section-nav .nav-arrow{display:none}.inner .section-head h1{font-size:43px}.inner .section{margin-top:35px}.inner .research-item h2{font-size:29px}.inner .tool h2{font-size:32px}.inner .podcast-row h2{font-size:27px}.inner .page-turns{margin-bottom:30px}}
-@media(min-width:1450px){.a .section{grid-template-columns:160px 1fr;column-gap:65px}.a .footer{margin-left:225px}}
-@media(max-width:1000px){.a .hero-grid{grid-template-columns:1.25fr 1fr;gap:7%}.a .hero h1{font-size:clamp(64px,8.1vw,90px)}.a .hero .intro-copy{font-size:14px}.a .section{grid-template-columns:100px 1fr;column-gap:32px}.a .footer{margin-left:132px}.a .pub-title{font-size:21px}}
+@media(min-width:1450px){.a .section{grid-template-columns:160px 1fr;column-gap:65px}.a .footer{margin-left:0}}
+@media(max-width:1000px){.a .hero-grid{grid-template-columns:1.25fr 1fr;gap:7%}.a .hero h1{font-size:clamp(64px,8.1vw,90px)}.a .hero .intro-copy{font-size:14px}.a .section{grid-template-columns:100px 1fr;column-gap:32px}.a .footer{margin-left:0}.a .pub-title{font-size:21px}}
 @media(max-width:800px){.a .hero{padding-top:35px}.a .hero-top{margin-bottom:24px}.a .hero-grid{grid-template-columns:1fr;gap:28px}.a .hero h1{font-size:clamp(75px,12vw,105px)}.a .hero .intro-copy{max-width:60ch;font-size:15px}.a .hero-note{margin-top:20px}.a .section-nav{margin-bottom:0}.a .section{grid-template-columns:1fr;margin-top:52px}.a .section-margin{display:flex;gap:10px;align-items:center;margin-bottom:18px}.a .section-margin .num{margin-bottom:0}.a .section-margin .margin-note{display:none}.a .section h2{font-size:42px}.a .footer{margin-left:0}.a .publication{grid-template-columns:20px 1fr 105px;gap:10px}.a .tool-title{font-size:32px}}
 @media(max-width:480px){.a .hero{padding-top:27px;padding-bottom:29px}.a .hero-top{font-size:9px;letter-spacing:.1em;gap:10px;margin-bottom:25px}.a .hero h1{font-size:63px}.a .hero-grid{gap:25px}.a .hero .intro-copy{font-size:14px;line-height:1.75}.a .hero-note{font-size:10px;max-width:29ch;line-height:1.6}.a .section-nav{padding-block:10px}.a .section-nav a{padding-block:6px}.a .section{margin-top:43px}.a .section-head{margin-bottom:22px}.a .section h2{font-size:39px}.a .section-margin{font-size:10px;margin-bottom:16px}.a .publication{grid-template-columns:17px 1fr;gap:9px;padding-block:17px}.a .pub-title{font-size:22px;line-height:1.15}.a .pub-meta{grid-column:2;text-align:left;padding-top:0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.a .pub-date{margin-top:0}.a .pub-no{padding-top:3px}.a .pub-byline{margin-top:7px}.a .pub-note{margin-top:0}.a .research-item h3{font-size:29px}.a .research-description{font-size:13px}.a .paper-authors{font-size:11px}.a .paper-meta{gap:9px;font-size:10px}.a .tool-image{padding:6px}.a .tool-kicker{font-size:9px}.a .tool-caption{grid-template-columns:1fr;gap:12px;padding-top:18px}.a .tool-title{font-size:32px}.a .tool-description{font-size:13px}.a .tool{margin-bottom:35px}.a .tool-credits{margin-top:0}.a .tool .todo{margin-top:8px}.a .podcast-row{grid-template-columns:30px 1fr;gap:14px}.a .podcast-number{font-size:29px}.a .podcast-row h3{font-size:27px}.a .astronomy-copy{font-size:25px}.a .teaching{font-size:13px}}
