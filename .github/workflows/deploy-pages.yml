@@ -28,7 +28,7 @@ jobs:
       - name: Prepare the static website
         run: |
           mkdir _site
-          cp index.html writing.html research.html tools.html podcasts.html off-the-clock.html robots.txt sitemap.xml .nojekyll _site/
+          cp *.html robots.txt sitemap.xml .nojekyll _site/
           cp -R assets _site/assets
       - name: Upload the website artifact
         uses: actions/upload-pages-artifact@v5.0.0
