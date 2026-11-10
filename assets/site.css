@@ -92,6 +92,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 }
 .btn:hover { border-color: var(--ink); }
 .btn[hidden] { display: none; }
+.icon-btn { width: 40px; padding: 0; display: inline-grid; place-items: center; }
+.theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .sun, :root[data-theme="dark"] .theme-toggle .moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .sun { display: block; }
 
 /* Opening snapshot: who, the lead tool and highlights without scrolling */
 .snapshot {
@@ -168,7 +172,12 @@ h3 { margin: 0 0 10px; font-size: 24px; line-height: 1.25; }
 .scope { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; align-items: start; }
 .scope img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 18%; }
 .scope h3 { margin-bottom: 6px; }
-.links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.icon-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.icon-links a { display: inline-grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--hair); border-radius: 999px; color: var(--ink); background-image: none; transition: border-color .2s ease, color .2s ease; }
+.icon-links a:hover { border-color: var(--ink); color: var(--link); }
+.icon-links svg { width: 18px; height: 18px; }
+.icon-links .solid { fill: currentColor; }
+.icon-links .line { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 
 .site-footer { padding-bottom: 70px; }
 .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; padding-top: 26px; border-top: 1px solid var(--hair); }
@@ -192,7 +201,7 @@ h3 { margin: 0 0 10px; font-size: 24px; line-height: 1.25; }
 @media (max-width: 760px) {
   body { font-size: 18px; }
   .site-header .wrap { flex-wrap: wrap; row-gap: 6px; padding-top: 10px; padding-bottom: 8px; }
-  .lamp { order: 2; margin-left: auto; }
+  .theme-toggle { order: 2; margin-left: auto; }
   .site-nav { order: 3; width: 100%; margin-left: 0; flex-wrap: nowrap; overflow-x: auto; gap: 18px; padding: 0 28px 4px 0; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 82%, transparent); mask-image: linear-gradient(to right, #000 82%, transparent); }
   .site-nav::-webkit-scrollbar { display: none; }
   .site-nav a { white-space: nowrap; }

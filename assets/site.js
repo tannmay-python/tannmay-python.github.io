@@ -1,22 +1,23 @@
-// Theme lamp and "show all" lists. Everything on the page works without this
+// Theme toggle and "show all" lists. Everything on the page works without this
 // file: lists start fully expanded and the site stays in light mode.
 (() => {
   const root = document.documentElement;
   const KEY = 'tannmay-portfolio-theme';
 
   // Theme: light by default; an explicit choice is the only thing stored.
-  const lamp = document.querySelector('[data-theme-toggle]');
+  // The sun and moon icons are swapped in CSS; here we only keep the label right.
+  const toggle = document.querySelector('[data-theme-toggle]');
   const applyTheme = (theme) => {
     root.dataset.theme = theme;
-    if (!lamp) return;
-    const dark = theme === 'dark';
-    lamp.textContent = dark ? 'Lamp on' : 'Lamp off';
-    lamp.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    if (!toggle) return;
+    const label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+    toggle.setAttribute('aria-label', label);
+    toggle.title = label;
   };
   let saved = null;
   try { saved = localStorage.getItem(KEY); } catch (_) {}
   applyTheme(saved === 'dark' ? 'dark' : 'light');
-  lamp?.addEventListener('click', () => {
+  toggle?.addEventListener('click', () => {
     const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
     applyTheme(next);
     try { localStorage.setItem(KEY, next); } catch (_) {}
