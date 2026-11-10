@@ -10,7 +10,6 @@
 .spines-scroll::-webkit-scrollbar { display: none; }
 .spines { display: flex; align-items: flex-end; gap: 2px; height: 104px; padding: 8px 2px 0; border-bottom: 2px solid var(--ink); }
 .spine { flex: var(--w) 1 0; min-width: 2px; height: var(--h); border-radius: 1px 1px 0 0; background: var(--ink); opacity: var(--o); cursor: pointer; transition: opacity .2s ease, transform .2s ease; }
-.spine.gap { margin-left: 9px; }
 .spine.reading { background: var(--link); opacity: .95; }
 .spine:hover { opacity: 1; transform: translateY(-5px); }
 .spines.filtered .spine:not(.on) { opacity: .07; }

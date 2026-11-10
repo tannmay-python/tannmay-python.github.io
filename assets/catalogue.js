@@ -20,18 +20,15 @@
   };
   const fold = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/['’‘]/g, '').toLowerCase();
 
-  let prev = null;
   const spines = items.map((li) => {
     const sp = document.createElement('span');
     sp.className = 'spine';
-    if (prev && li.dataset.shelf !== prev) sp.classList.add('gap');
     if ('reading' in li.dataset) sp.classList.add('reading');
     sp.style.setProperty('--w', Number(li.dataset.pages) || 260);
     sp.style.setProperty('--h', (60 + hash(li.id) * 40).toFixed(1) + '%');
     sp.style.setProperty('--o', (0.2 + hash(li.id + '~') * 0.5).toFixed(2));
     sp.dataset.target = li.id;
     li.dataset.search = fold(li.dataset.search);
-    prev = li.dataset.shelf;
     spinesEl.appendChild(sp);
     return sp;
   });
