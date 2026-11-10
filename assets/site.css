@@ -146,7 +146,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-
 .tool:last-of-type { border-bottom: 0; }
 .tool p { text-wrap: pretty; }
 .shot { display: none; width: 100%; margin-top: 12px; border: 1px solid var(--hair); border-radius: 3px; }
-.tool:hover .shot, .tool:focus-within .shot { display: block; animation: rise .35s ease; }
+/* Preview only while the tool name itself is hovered or keyboard-focused */
+.tool > a:hover ~ .shot, .tool > a:focus-visible ~ .shot { display: block; animation: rise .35s ease; }
 @media (hover: none) { .shot { display: block; } }
 @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
